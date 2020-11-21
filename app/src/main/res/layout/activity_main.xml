@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/redraw_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Redraw" />
+
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/redraw_button"
+        android:text="Save" />
+
+
+    <android.gesture.GestureOverlayView
+        android:id="@+id/sign_pad"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/save_button"
+        android:background="@android:color/holo_green_light"
+        android:fadeEnabled="false"
+        android:fadeOffset="10000"
+        android:gestureColor="@color/colorPrimary"
+        android:uncertainGestureColor="@android:color/holo_red_light"
+        android:gestureStrokeLengthThreshold="0.1"
+        android:gestureStrokeType="multiple"
+        android:orientation="vertical" >
+    </android.gesture.GestureOverlayView>
+    <Button
+        android:id="@+id/pick_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:text="Pick Image" />
+
+</RelativeLayout>
